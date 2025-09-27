@@ -118,7 +118,7 @@ def order_count_1000():
                     FROM users u JOIN orders o ON u.id = o.user_id GROUP BY u.username HAVING total_amount > 1000""")
         for i in c.fetchall():
             print(i[0])
-
+# 6
 def latest_orders():
     with sqlite3.connect('main.db') as conn:
         c = conn.cursor()
